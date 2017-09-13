@@ -1,2 +1,2 @@
-# hackathon71
-Baseline config repo for NANOG71 Hackathon.
+# hackathon70
+Please visit the wiki! https://github.com/NANOG/hackathon70/wiki
