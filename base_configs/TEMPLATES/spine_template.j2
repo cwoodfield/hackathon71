@@ -88,8 +88,10 @@ router bgp {{ bgp_asn }}
    {% endfor %}
    {% for peer in leaf_peers -%}
    neighbor {{ peer.ip4_peer_addr }} remote-as {{ peer.asn }}
+   neighbor {{ peer.ip4_peer_addr }} description {{ peer.description }}
    neighbor {{ peer.ip4_peer_addr }} peer-group LEAF
    neighbor {{ peer.ip6_peer_addr }} remote-as {{ peer.asn }}
+   neighbor {{ peer.ip6_peer_addr }} description {{ peer.description }}
    neighbor {{ peer.ip6_peer_addr }} peer-group LEAF-V6
    {% endfor %}
    aggregate-address {{ bgp_ip4_aggregate }}
