@@ -48,10 +48,10 @@ ipv6 unicast-routing
 router bgp {{ bgp_asn }}
    maximum-paths 16
    neighbor SPINE peer-group
-   neighbor SPINE remote-as 65001
+   neighbor SPINE remote-as {{ spine_asn }}
    neighbor SPINE allowas-in
    neighbor SPINE-V6 peer-group
-   neighbor SPINE-V6 remote-as 65001
+   neighbor SPINE-V6 remote-as {{ spine_asn }}
    neighbor SPINE-V6 allowas-in
    address-family ipv4
      neighbor SPINE activate
@@ -61,7 +61,9 @@ router bgp {{ bgp_asn }}
      no neighbor SPINE activate
    {% for peer in spine_peers -%}
    neighbor {{ peer.ip4_peer_addr }} peer-group SPINE
+   neighbor {{ peer.ip4_peer_addr }} description {{ peer.description }}
    neighbor {{ peer.ip6_peer_addr }} peer-group SPINE-V6
+   neighbor {{ peer.ip6_peer_addr }} description {{ peer.description }}
    {% endfor %}
    redistribute connected
 !
