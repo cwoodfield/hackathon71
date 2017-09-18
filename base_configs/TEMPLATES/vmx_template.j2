@@ -184,7 +184,7 @@ protocols {
             }
             {% endfor %}
         }
-        group DC {                      
+        group DCA {                      
             type external;              
             import DC-IN;
             family inet {               
@@ -193,13 +193,13 @@ protocols {
             export DC-OUT;              
             peer-as 65001;              
             multipath;                  
-            {% for spine_peer in spine_peers %}
+            {% for spine_peer in dca_spine_peers %}
             neighbor {{ spine_peer.ip4_addr }} {
                 description {{ spine_peer.description }};
             }
             {% endfor %}
         }                               
-        group DC-V6 {                   
+        group DCA-V6 {                   
             type external;              
             import DC-IN;
             family inet6 {              
@@ -208,7 +208,37 @@ protocols {
             export DC-V6-OUT;           
             peer-as 65001;              
             multipath;                  
-            {% for spine_peer in spine_peers %}
+            {% for spine_peer in dca_spine_peers %}
+            neighbor {{ spine_peer.ip6_addr }} {
+                description {{ spine_peer.description }};
+            }
+            {% endfor %}
+        }
+        group DCB {
+            type external;
+            import DC-IN;
+            family inet {
+                unicast;
+            }
+            export DC-OUT;
+            peer-as 65002;
+            multipath;
+            {% for spine_peer in dcb_spine_peers %}
+            neighbor {{ spine_peer.ip4_addr }} {
+                description {{ spine_peer.description }};
+            }
+            {% endfor %}
+        }
+        group DCB-V6 {
+            type external;
+            import DC-IN;
+            family inet6 {
+                unicast;
+            }
+            export DC-V6-OUT;
+            peer-as 65002;
+            multipath;
+            {% for spine_peer in dcb_spine_peers %}
             neighbor {{ spine_peer.ip6_addr }} {
                 description {{ spine_peer.description }};
             }
