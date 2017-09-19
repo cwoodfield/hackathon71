@@ -1,0 +1,11 @@
+auto ens3
+iface ens3 inet static
+  address 10.16.129.100
+  netmask 255.255.255.0
+  network 10.16.129.0
+  broadcast 10.16.129.255
+  gateway 10.16.129.1
+
+iface ens3 inet6 static
+  address 2001:db8:1:129::100/64
+  gateway 2001:db8:1:129::1
