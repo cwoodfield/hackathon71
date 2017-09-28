@@ -1,4 +1,4 @@
-hostname: eos-leaf1
+hostname: eos-leaf2
 interfaces:
 - name: Ethernet1
   description: Ethernet2:eos-spine1
@@ -15,7 +15,7 @@ interfaces:
 lo_ip4_addr: 10.16.33.2/32
 lo_ip6_addr: 2001:db8:1::10:16:33:2/128
 mgmt_addr: 10.0.0.22
-bgp_asn: 65011
+bgp_asn: 65012
 spine_asn: 65001
 spine_peers:
 - description: eos-spine1
