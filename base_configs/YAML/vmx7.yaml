@@ -4,7 +4,7 @@ interfaces:
 - name: ge-0/0/0
   description: ge-0-0-0:vmx8
   ip4_addr: 10.1.0.0/31
-  ip6_addr: 2001:db8::10:1:0:1/127
+  ip6_addr: 2001:db8::10:1:0:0/127
   apply_groups: 
   - BB-INT-BASE
 - name: ge-0/0/1
