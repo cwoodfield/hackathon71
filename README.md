@@ -1,4 +1,3 @@
-```
 # hackathon71
 
 Addressing scheme for lab. Note this is an INCREDIBLY WASTEFUL
@@ -11,8 +10,10 @@ into DCA (spine1/2) and DCB (spine3/4).
 DCA/DCB speak EBGP internally, and advertise datacenter aggregates
 to the upstream VMXes.
 
+
 ![Lab Diagram](./hackathon_lab_diagram_asns.png)
- 
+
+``` 
 VMX7/8/9 backbone: AS 65000
 IPv4:
   10.255.0.0/24 - VMX Loopbacks
