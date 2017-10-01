@@ -25,7 +25,7 @@ IPv6:
   2001:db8::10:255/80 - VMX Loopbacks
   2001:db8::10:1/80 - PtP addresses
 
-SPINE/LEAF 1/2 - DCA: AS 65011
+SPINE/LEAF 1/2 - DCA: AS 65001 (spine), 65011/65012 (leaf1/2)
 IPv4:
   10.16.0.0/16 - DCA Aggregate
     10.16.1.0/24 - PtP
@@ -43,7 +43,7 @@ IPv6:
     2001:db8:1:129::/64 - Rack2
       2001:db8:1:129::100 - Host2
 
-SPINE/LEAF 3/4 - DCB: AS 65021
+SPINE/LEAF 3/4 - DCB: AS 65002 (spine), 65021/65022 (leaf1/2)
 IPv4:
   10.17.0.0/16 - DCB Aggregate
     10.17.1.0/24 - PtP
