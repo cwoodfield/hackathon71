@@ -10,6 +10,9 @@ into DCA (spine1/2) and DCB (spine3/4).
 DCA/DCB speak EBGP internally, and advertise datacenter aggregates
 to the upstream VMXes.
 
+host1/2/3/4 are reachable via /etc/host entries on the jumphost; IPs below
+are specific to the DC fabric itself (use these if you set up host-leaf BGP,
+for example).
 
 ![Lab Diagram](./hackathon_lab_diagram_asns.png)
 
