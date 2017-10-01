@@ -10,6 +10,8 @@ into DCA (spine1/2) and DCB (spine3/4).
 
 DCA/DCB speak EBGP internally, and advertise datacenter aggregates
 to the upstream VMXes.
+
+![Lab Diagram](https://github.com/cwoodfield/hackathon71/blob/master/hackathon_lab_diagram_asns.pdf)
  
 VMX7/8/9 backbone: AS 65000
 IPv4:
