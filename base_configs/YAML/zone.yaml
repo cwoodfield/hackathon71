@@ -6,7 +6,7 @@ REFRESH: 30m
 RETRY: 6m
 EXPIRE: 7d
 MINIMUM: 15min
-zone: ntc.com.
+zone: lab.test.
 authorities:
  - ns1.localdomain.
  - ns2.localdomain.
