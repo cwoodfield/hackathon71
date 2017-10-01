@@ -1,3 +1,4 @@
+```
 # hackathon71
 
 Addressing scheme for lab. Note this is an INCREDIBLY WASTEFUL
@@ -53,5 +54,4 @@ IPv6:
       2001:db8:2:10:128::100 - Host3
     2001:db8:2:10:129::/64 - Rack4
       2001:db8:2:10:129::100 - Rack4
-
-
+```
