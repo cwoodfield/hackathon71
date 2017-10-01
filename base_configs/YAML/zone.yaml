@@ -1,0 +1,12 @@
+TTL: 3600
+MNAME: localhost.localdomain.
+RNAME: hostmaster.localdomain.
+SERIAL: 1000000000
+REFRESH: 30m
+RETRY: 6m
+EXPIRE: 7d
+MINIMUM: 15min
+zone: lab.test.
+authorities:
+ - ns1.localdomain.
+ - ns2.localdomain.

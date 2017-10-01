@@ -8,3 +8,5 @@ do
     ./template_gen.py TEMPLATES/${x}_template.j2 $y > CONFIGS/$cf
   done
 done
+
+./gen_zone.py YAML/zone.yaml YAML CONFIGS/dns

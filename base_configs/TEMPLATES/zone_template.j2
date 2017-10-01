@@ -1,0 +1,18 @@
+$ORIGIN {{ zone }}
+$TTL {{ TTL }}
+@                       IN  SOA     {{ MNAME }} {{ RNAME }} (
+                                        {{ SERIAL }} ; serial
+                                        {{ REFRESH }} ; refresh
+                                        {{ RETRY }} ; retry
+                                        {{ EXPIRE }} ; expire
+                                        {{ MINIMUM }} ; minimum
+                                    )
+{% for ns in authorities %}
+                        IN  NS      {{ ns }}
+{% endfor %}
+
+{% for name in records %}
+{% for r in records[name] %}
+{{ name }} IN {{ r.rtype }} {{ r.rdata }}
+{% endfor %}
+{% endfor %}
