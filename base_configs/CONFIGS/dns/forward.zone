@@ -1,4 +1,4 @@
-$ORIGIN ntc.com.
+$ORIGIN lab.test.
 $TTL 3600
 @                       IN  SOA     localhost.localdomain. hostmaster.localdomain. (
                                         1000000000 ; serial
