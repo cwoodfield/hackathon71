@@ -2,6 +2,13 @@
 
 Addressing scheme for lab. Note this is an INCREDIBLY WASTEFUL
 addressing setup that I hope no one emulates in a real environment. :)
+
+VMX7/8/9 run IS-IS on "backbone" lines, and peer via iBGP to loopbacks
+over both IPv4 and IPv6, advertising 0/0 to each spine, which is separated
+into DCA (spine1/2) and DCB (spine3/4).
+
+DCA/DCB speak EBGP internally, and advertise datacenter aggregates
+to the upstream VMXes.
  
 VMX7/8/9 backbone: AS 65000
 IPv4:
